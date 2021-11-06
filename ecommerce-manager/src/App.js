@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router';
 import ListOfProd from "./components/ListOfProd"
 import Product from './components/ProductsUPDE';
-import NewProd from "./components/AddProd"
+import AddProd from "./components/AddProd"
 import './App.css';
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
          </Route>
          <Route exact path ="/products" component={ListOfProd} />
          <Route exact path ="/products/:id" component={Product}/>
-         <Route exact path ="/products/new" component={NewProd}/>
+         <Route exact path ="/product/new" component={AddProd}/>
 
        </Switch>
     </div>

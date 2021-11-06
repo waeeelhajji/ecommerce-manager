@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link ,NavLink } from 'react-router-dom';
 import Axios from 'axios';
 
 const ListOfProd = () => {
@@ -28,7 +29,7 @@ const ListOfProd = () => {
               <td>{Qty}</td>
               <td>{Price}</td>   
               <button type="button" className="btn btn-primary">Edit</button>
-              <button type="button" className="btn btn-danger">Delete</button>
+              <NavLink to={`/products/${id}`} className="btn btn-primary">See More</NavLink>
               </tr>
            )
         })
@@ -37,7 +38,9 @@ const ListOfProd = () => {
 
     return (
         <div>
+            <Link to="/product/new"> 
            <button type="button" class="btn btn-info">Add New Product</button>
+            </Link>
              <table>
       <thead>
         <tr>
