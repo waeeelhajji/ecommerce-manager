@@ -26,6 +26,7 @@ const ProductsUPDE = () => {
     const deleteProduct = (id) => {
         Axios.delete(`http://localhost:3001/delprod/${id}`)
       }
+      
     const prodid = useParams()
     console.log({product});
     const prodDetails = product.find(prod=>prod.id==prodid.id)
@@ -33,6 +34,7 @@ const ProductsUPDE = () => {
 
     return (
         <div>
+            <h2> Product Details</h2>
             {prodDetails&&
              <div className="container my-5 py-3">
                 <div className="row">

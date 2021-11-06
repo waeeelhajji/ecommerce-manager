@@ -28,7 +28,7 @@ const ListOfProd = () => {
               <td>{name}</td>
               <td>{Qty}</td>
               <td>{Price}</td>   
-              <button type="button" className="btn btn-primary">Edit</button>
+              <NavLink to={`/prooducts/${id}`} className="btn btn-primary">See More</NavLink>
               <NavLink to={`/products/${id}`} className="btn btn-primary">See More</NavLink>
               </tr>
            )
