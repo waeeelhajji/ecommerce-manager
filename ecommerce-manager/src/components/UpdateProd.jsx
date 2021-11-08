@@ -21,10 +21,14 @@ const UpdateProd = () => {
         })
     }
     const updateProd = (id)=>{
+      if(Name.length<3 || Qtys<=0 || Prices<=0){
+        alert("**Products must contain a Name at least three characters** **QTy Must contain a Qty more then 0** **Must have Price** ")
+    }else{
         Axios.patch(`http://localhost:3001/updprod/${id}`,{name:Name,Qty:Qtys,Price:Prices
     }).then(()=>{
         alert("done")
       })
+    }
     }
     
     
