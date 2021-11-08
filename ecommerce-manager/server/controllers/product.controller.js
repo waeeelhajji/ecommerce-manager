@@ -15,9 +15,6 @@ var selectAllProd = function(req,res){
     })
 }
 
-
-
-
 // Post Products
 
 var createProd = function(req,res){
@@ -26,7 +23,6 @@ var createProd = function(req,res){
         res.send(results)
     })
 }
-
 
 // Update Products
 
@@ -40,9 +36,6 @@ var updateProd = function(req,res){
         }
     })
 }
-
-
-
 
 // Delete Products
 

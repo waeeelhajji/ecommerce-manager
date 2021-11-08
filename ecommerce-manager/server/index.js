@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express()
 
-
 const port = 3001
 
 const prodRoutes = require('./router/product.routes')
@@ -20,15 +19,7 @@ app.use(cors({
 }))
 
 
-
-
-
-
 app.use('/', prodRoutes)
-
-
-
-
 
 
 

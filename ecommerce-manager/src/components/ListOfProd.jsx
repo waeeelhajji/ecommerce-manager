@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link ,NavLink } from 'react-router-dom';
 import Axios from 'axios';
 
+
+
 const ListOfProd = () => {
     const [products,setProducts]= useState([])
 
@@ -28,8 +30,8 @@ const ListOfProd = () => {
               <td>{name}</td>
               <td>{Qty}</td>
               <td>{Price}</td>   
-              <NavLink to={`/prooducts/${id}`} className="btn btn-primary">See More</NavLink>
-              <NavLink to={`/products/${id}`} className="btn btn-primary">See More</NavLink>
+              <NavLink to={`/prooducts/${id}`} className="btn btn-primary">Edit</NavLink>
+              <NavLink to={`/products/${id}`} className="btn btn-primary">Details</NavLink>
               </tr>
            )
         })

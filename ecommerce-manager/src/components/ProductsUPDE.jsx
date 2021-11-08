@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useParams } from "react-router";
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
-
-
-
-
-
 
 
 const ProductsUPDE = () => {
@@ -45,7 +41,7 @@ const ProductsUPDE = () => {
                         <p className="lead">{prodDetails.Qty}</p>
                         <button onClick={()=>{deleteProduct(prodDetails.id)}} type="button" class="btn btn-danger">Delete</button>
                         <Link to="/products">
-                        <button type="button" class="btn btn-light">Back</button>
+                        <NavLink to={"/"} className="btn btn-primary">Back</NavLink>
                         </Link>
                     </div>
                 </div>

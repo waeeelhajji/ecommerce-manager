@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useParams } from "react-router";
 import Axios from 'axios';
 
@@ -54,7 +55,7 @@ const UpdateProd = () => {
     <label for="exampleInputPassword1" class="form-label">Price</label>
     <input type="number" class="form-control"  id="exampleInputPassword1" placeholder={prodDetails.Price} onChange={(event)=>{setPrice(event.target.value)}}/>
   </div>
-  <button type="submit" class="btn btn-primary">Reset</button>
+  <NavLink to={"/"} className="btn btn-primary">Reset</NavLink>
   <button type="submit" class="btn btn-primary" onClick={()=>{updateProd(prodDetails.id)}}>Update</button>
   </form>     
     }
